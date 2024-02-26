@@ -1,0 +1,219 @@
+/* Reset default margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style paragraphs */
+p {
+    font-family: "Georgia", serif;
+    font-size: 14;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin: 10px;
+  }
+h1 {
+    font-family: "Georgia", serif;
+    font-weight: i;
+    margin: 0;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+h2 {
+    font-family: "Georgia", serif;
+    font-weight: normal;
+    margin: 0;
+    font-size: 27px;
+    margin-bottom: 15px;
+  }
+h3 {
+    font-family: "Georgia", serif;
+    font-weight: normal;
+    margin: 10px;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+.container {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+
+    align-items: center;
+}
+.container .text {
+    width: 90%; /* Adjust the width of text */
+}
+.container .image img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust the height as needed */
+}
+
+.content {
+    max-width: 100%; /* Adjust the width of the content */
+    padding: 45px; 
+}
+
+.video-section video {
+    max-width: 50%; /* Adjust the width of the video */
+    max-height: 100%; /* Ensure the video doesn't exceed the container height */
+    width: auto;
+    height: auto;
+}
+
+/* home page */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #000
+}
+Main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+    padding: 50px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    background-color: #f3f3f3;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+
+/* article*/
+.article-header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    margin: 30px;
+}
+.article-content{
+    display: grid;
+    grid-template-columns: 1fr; /* single column layout*/
+    gap: 20px;
+    padding: 20px;
+    margin: 50px;
+    justify-items: center;
+}
+.article-content img{
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 350px;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.advertisement{
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.advertisement img{
+    max-width: 100%;
+    
+}
+
+/*gallery*/
+.gallery-section {
+  margin-bottom: 60px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: #3f403f;
+  }
+.gallery-section h3 {
+  text-align: center;
+  color: #475841;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+}
+.navigation-buttons button {
+    margin: 10px;
+    border: none; 
+    padding: 8px 16px;
+    background-color: white; 
+    color: black; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family:Georgia, serif;
+    font-size: 15px;
+}
+.navigation-buttons button:hover {
+    background-color: lightcoral;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/*hamburger Menu style*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+    color: black;
+    left: 100px
+}
+/* hide regular navigation items on smaller screens*/
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+        display: none;
+    }
+    nav ul.active{
+        display: flex;
+    }
+}
